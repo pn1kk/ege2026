@@ -1,2 +1,2 @@
 # ege2026
-My own ege theory, notes, and sample pieces of code. Feel free to use during your prep!
+Мои личные конспекты с теорией и примеры решения заданий ЕГЭ 2026 по информатике. 
