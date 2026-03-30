@@ -1,4 +1,4 @@
-f = open('input24.txt', 'r')
+f = open('24.txt', 'r')
 data = f.read()
 data1 = data
 it1, it2 = 'PR', 'ST'
