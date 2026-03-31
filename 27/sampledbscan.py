@@ -7,18 +7,21 @@ def dbscan(dots):
     while len(dots) > 0:
         X = dots.pop()
         new_cluster = [X]
-
-        for d in new_cluster:
+        i = 0
+        while i < len(new_cluster):
+            d = new_cluster[i]
             neighbours = []
 
-            for d2 in new_cluster:
-                if dist(d, d2) <= eps:
+            for d2 in dots[:]:
+                if dist(d, d2) <= eps and d2 not in new_cluster:
                     neighbours += [d2]
         
             new_cluster += neighbours
 
             for d2 in neighbours:
                 dots.remove(d2)
+
+            i += 1
 
         all_clusters += [new_cluster]
 
