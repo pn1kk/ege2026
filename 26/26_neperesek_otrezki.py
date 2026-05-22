@@ -33,8 +33,10 @@ n = int(f[0].split()[0])
 l = int(f[0].split()[1])
 for i in range(1, len(f) - 1):
     s.append(list(map(int, f[i].split())))
+#в файле последняя строка пустая, поэтому добавляем в список на 1 меньше строк данных
 
 s.sort(key = lambda x: (x[1], x[0]))
+
 dp = [1]
 for i in range(1, len(s)):
     j = -1
