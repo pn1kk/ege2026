@@ -5,10 +5,11 @@ def dbscan(dots):
     all_clusters = []
 
     while len(dots) > 0:
-        X = dots.pop()
+        X = dots.pop() # начинаем новый кластер из рандомного элемента оставшихся точек
         new_cluster = [X]
         i = 0
         while i < len(new_cluster):
+            # перебираем все элементы кластера и добавляем его соседей в него
             d = new_cluster[i]
             neighbours = []
 
@@ -18,6 +19,8 @@ def dbscan(dots):
         
             new_cluster += neighbours
 
+            #потом соседей удаляем из исходного списка точек чтобы не повторялись
+            
             for d2 in neighbours:
                 dots.remove(d2)
 
