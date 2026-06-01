@@ -34,7 +34,7 @@ for i in range(1, m + 1):
     k += [ko]
     z += [za]
 
-for i in range(m + 1, n - m + 1):
+for i in range(m + 1, n + 1):
     ko = int(f[i].split()[0])
     k += [ko]
 
