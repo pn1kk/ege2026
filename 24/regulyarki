@@ -1,0 +1,12 @@
+from re import *
+f = open('24_4723.txt').read()
+n = r'[1234]+'
+summa = r'({n}[+])+{n}'   # n+n+n+n+n
+braces = r'[(]{summa}[)]'
+# (123214+(2324+234))
+
+words = [x.group(0) for x in finditer(braces, f)]
+
+print(words)
+
+# eval()
